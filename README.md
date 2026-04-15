@@ -1,21 +1,42 @@
-## 🤝 KeenKeeper
+# 🤝 KeenKeeper
 
-> **Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.**
+**Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg?style=for-the-badge)](https://ph-a07-by-jubayer.vercel.app/)
 
-## 📖 Short Description
-KeenKeeper is a personal relationship management tool designed to keep your meaningful connections close. It empowers users to easily browse, tend to, and nurture friendships and relationships, ensuring no important connection falls out of touch. Think of it as a personal CRM for your friends!
+## 📖 Overview
 
-## ✨ 3 Key Features
-1. **Interactive Relationship Dashboard:** Get a quick overview of your network with real-time stats, including *Total Friends*, connections that are *On Track*, and those who *Need Attention*.
-2. **Seamless Friend Management:** Easily add new friends to your shelf and keep track of your most important social circles in one dedicated, organized space.
-3. **Interaction Tracking & Timeline:** Monitor your monthly interactions and view your connection history through dedicated **Timeline** and **Stats** views to ensure you are consistently nurturing your relationships.
+KeenKeeper is a personal relationship management tool built to help users stay close to the people who matter most. It makes it easy to browse, manage, and nurture meaningful friendships and relationships so that no important connection is forgotten.
+
+Think of KeenKeeper as a personal CRM for your friends — designed to support stronger, more consistent social connections.
+
+## ✨ Key Features
+
+### 1. Interactive Relationship Dashboard
+Get a quick snapshot of your network with real-time insights, including:
+- **Total Friends**
+- Friends who are **On Track**
+- Friends who **Need Attention**
+
+This dashboard helps users instantly understand the health of their relationships.
+
+### 2. Seamless Friend Management
+Add new friends easily and organize your most meaningful connections in one dedicated place. KeenKeeper provides a simple and structured way to keep your social circle manageable and accessible.
+
+### 3. Interaction Tracking and Timeline
+Track monthly interactions and explore your connection history through **Timeline** and **Stats** views. This helps users maintain regular communication and build stronger relationships over time.
 
 ## 🛠️ Technologies Used
-* **Frontend:** Next.js
-* **Styling:** Tailwind CSS
-* **Routing:** App Router
-* **Deployment:** Vercel
 
----
+- **Frontend:** Next.js
+- **Styling:** Tailwind CSS
+- **Routing:** App Router
+- **Deployment:** Vercel
+
+## 🎯 Purpose
+
+KeenKeeper is designed for people who want to be more intentional about maintaining their relationships. By combining friend management, interaction tracking, and visual insights, it helps users nurture meaningful connections in a thoughtful and organized way.
+
+## 🔗 Live Demo
+
+Check out the live project here:  
+[https://keen-keeper-moeen.vercel.app/](https://keen-keeper-moeen.vercel.app/)
