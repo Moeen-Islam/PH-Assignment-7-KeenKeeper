@@ -9,7 +9,7 @@ export default function StatsPage() {
 
   useEffect(() => {
     const savedTimeline = JSON.parse(localStorage.getItem("friend_timeline") || "[]");
-    
+
     const counts = savedTimeline.reduce((acc, entry) => {
       acc[entry.type] = (acc[entry.type] || 0) + 1;
       return acc;
@@ -19,7 +19,7 @@ export default function StatsPage() {
       { name: "Call", value: counts["Call"] || 0 },
       { name: "Text", value: counts["Text"] || 0 },
       { name: "Video", value: counts["Video"] || 0 },
-    ].filter(d => d.value > 0);
+    ].filter((d) => d.value > 0);
 
     setData(chartData);
   }, []);
@@ -28,14 +28,18 @@ export default function StatsPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-5xl">
-      <h1 className="text-4xl font-black tracking-tight mb-12 text-[#1A1A1A]">Friendship Analytics</h1>
+      <h1 className="text-4xl font-black tracking-tight mb-12 text-[#1A1A1A]">
+        Friendship Analytics
+      </h1>
 
       <div className="bg-white p-12 rounded-xl shadow-sm border border-gray-100">
-        <h2 className="text-xl font-bold text-[#1A1A1A] mb-12">By Interaction Type</h2>
-        
+        <h2 className="text-xl font-bold text-[#1A1A1A] mb-12">
+          By Interaction Type
+        </h2>
+
         {data.length > 0 ? (
           <div className="flex flex-col items-center">
-            <div className="w-full h-100">
+            <div className="w-full h-[400px]">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -48,22 +52,34 @@ export default function StatsPage() {
                     dataKey="value"
                     stroke="none"
                   >
-                    {data.map((index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    {data.map((entry, index) => (
+                      <Cell
+                        key={`cell-${entry.name}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
                     ))}
                   </Pie>
-                  <Tooltip 
-                    contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
+                  <Tooltip
+                    contentStyle={{
+                      borderRadius: "12px",
+                      border: "none",
+                      boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1)",
+                    }}
                   />
                 </PieChart>
               </ResponsiveContainer>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-8 mt-8">
               {data.map((item, i) => (
                 <div key={item.name} className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: COLORS[i % COLORS.length] }}></div>
-                  <span className="text-sm font-bold text-gray-600">{item.name}</span>
+                  <div
+                    className="w-3 h-3 rounded-full"
+                    style={{ backgroundColor: COLORS[i % COLORS.length] }}
+                  />
+                  <span className="text-sm font-bold text-gray-600">
+                    {item.name}
+                  </span>
                 </div>
               ))}
             </div>
